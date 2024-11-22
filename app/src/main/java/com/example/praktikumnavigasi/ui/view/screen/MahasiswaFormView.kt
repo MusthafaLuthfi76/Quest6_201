@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Info
@@ -31,6 +32,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -100,7 +103,8 @@ onBackButtonClick : () -> Unit
                 )
 
                 Text(
-                    text = "Isi Sesuai Data yang Kamu Daftarkan"
+                    text = "Isi Sesuai Data yang Kamu Daftarkan",
+                    fontWeight = FontWeight.Light
                 )
 
                 Spacer(modifier = Modifier.padding(4.dp))
@@ -116,7 +120,12 @@ onBackButtonClick : () -> Unit
                             imageVector = Icons.Filled.Info,
                             contentDescription = ""
                         )
-                    }
+                    },
+                    keyboardOptions = KeyboardOptions(
+                        keyboardType = KeyboardType.Number,
+                        imeAction = ImeAction.Next
+                    ),
+                    singleLine = true
                 )
 
                 Spacer(modifier = Modifier.padding(4.dp))
@@ -132,7 +141,12 @@ onBackButtonClick : () -> Unit
                             imageVector = Icons.Filled.Person,
                             contentDescription = ""
                         )
-                    }
+                    },
+                    keyboardOptions = KeyboardOptions(
+                        keyboardType = KeyboardType.Text,
+                        imeAction = ImeAction.Next
+                    ),
+                    singleLine = true
                 )
 
                 Spacer(modifier = Modifier.padding(4.dp))
@@ -148,7 +162,12 @@ onBackButtonClick : () -> Unit
                             imageVector = Icons.Filled.Email,
                             contentDescription = ""
                         )
-                    }
+                    },
+                    keyboardOptions = KeyboardOptions(
+                        keyboardType = KeyboardType.Email,
+                        imeAction = ImeAction.Done
+                    ),
+                    singleLine = true,
                 )
                 Spacer(modifier = Modifier.padding(16.dp))
 
