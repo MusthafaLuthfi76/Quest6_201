@@ -36,7 +36,6 @@ fun TampilKrsView(
             judul = "E-mail",
             isinya = mhs.email
         )
-        Text(text = "Rencana Studi", fontWeight = FontWeight.Bold)
         TampilData(
             judul = "Nama Mata Kuliah",
             isinya = rs.namaMK
