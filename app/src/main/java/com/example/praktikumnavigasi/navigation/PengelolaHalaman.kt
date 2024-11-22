@@ -15,7 +15,9 @@ import com.example.praktikumnavigasi.ui.view.viewmodel.MahasiswaViewModel
 
 enum class Halaman {
     Splash,
-    Mahasiswa
+    Mahasiswa,
+    Matakuliah,
+    Tampil
 }
 
 @Composable
