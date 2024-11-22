@@ -78,13 +78,13 @@ fun RencanaStudyView(
                 Text(
                     text = mahasiswa.nama,
                     fontWeight = FontWeight.Bold,
-                    fontSize = 15.dp,
+                    fontSize = 15.sp,
                     color = Color.White
                 )
                 Text(
                     text = mahasiswa.nim,
                     fontWeight = FontWeight.Light,
-                    fontSize = 12.dp,
+                    fontSize = 12.sp,
                     color = Color.White
                 )
             }
