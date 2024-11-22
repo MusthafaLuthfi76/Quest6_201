@@ -41,10 +41,15 @@ fun MahasiswaApp(
             })
         }
 
-        composable(route = Halaman.Splash.name){
+        composable(route = Halaman.Mahasiswa.name){
             MahasiswaFormView(onSubmitButton = {
-
-            }) { }
+                mahasiswaViewModel.saveDataMahasiswa(it)
+                navController.navigate(Halaman.Matakuliah.name)
+            },
+                onBackButtonClick = {
+                    navController.popBackStack()
+                }
+            )
         }
     }
 }
