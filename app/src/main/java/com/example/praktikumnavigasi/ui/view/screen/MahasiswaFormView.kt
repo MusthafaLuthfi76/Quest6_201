@@ -179,7 +179,7 @@ onBackButtonClick : () -> Unit
                         Text(text = "Simpan")
                     }
 
-                    Button(onClick = {onBackButtonClick}) {
+                    Button(onClick = {onBackButtonClick()}) {
                         Text(text = "Kembali")
                     }
                 }
